@@ -15,6 +15,34 @@ import {
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
+const featuredActivities = [
+  {
+    title: 'Sports',
+    image: '/images/activity1.jpeg',
+    alt: 'Learners participating in sports',
+  },
+  {
+    title: 'Karate',
+    image: '/images/activity3.jpg',
+    alt: 'Learners practising karate',
+  },
+  {
+    title: 'Chess Clubs',
+    image: '/images/activity2.jpg',
+    alt: 'Learners participating in chess',
+  },
+  {
+    title: 'Spelling Bees',
+    image: '/images/bg-image-about-us.jpeg',
+    alt: 'Learners participating in spelling bees',
+  },
+  {
+    title: 'Cultural Tours',
+    image: '/images/curriculum-2.jpeg',
+    alt: 'Learners enjoying cultural tours',
+  },
+]
+
 const activities = [
   {
     title: 'Chess',
@@ -230,34 +258,28 @@ export default function ExtracurricularActivities() {
       </p>
     </div>
 
-    {/* ACTIVITY IMAGE OVERLAYS */}
+    {/* FIVE ACTIVITY IMAGES */}
     <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
 
-      {[
-        'Sports',
-        'Karate',
-        'Chess Clubs',
-        'Spelling Bees',
-        'Cultural Tours',
-      ].map((item, index) => (
+      {featuredActivities.map((activity) => (
         <div
-          key={item}
+          key={activity.title}
           className="group relative h-64 overflow-hidden rounded-2xl bg-[#092B45] md:h-72"
         >
           <img
-            src={photos[index % photos.length].src}
-            alt={item}
+            src={activity.image}
+            alt={activity.alt}
             loading="lazy"
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
           />
 
-          {/* DARK OVERLAY */}
-          <div className="absolute inset-0 bg-black/40 transition group-hover:bg-black/60" />
+          {/* DARK IMAGE OVERLAY */}
+          <div className="absolute inset-0 bg-black/40 transition duration-300 group-hover:bg-black/60" />
 
-          {/* ACTIVITY TITLE */}
+          {/* ACTIVITY NAME */}
           <div className="absolute inset-0 flex items-center justify-center p-4">
             <h3 className="text-center text-xl font-bold text-white md:text-2xl">
-              {item}
+              {activity.title}
             </h3>
           </div>
         </div>
