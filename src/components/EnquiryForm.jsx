@@ -22,8 +22,7 @@ export default function EnquiryForm() {
                 </div>
 
                 <form
-                    //   action="https://formsubmit.co/info@westrandprivateschool.co.za"
-                    action="https://formsubmit.co/kopontheledi@gmail.com"
+                      action="https://formsubmit.co/info@westrandprivateschool.co.za"
                     method="POST"
                     className="space-y-6 rounded-2xl bg-white p-6 shadow-sm md:p-10"
                 >
