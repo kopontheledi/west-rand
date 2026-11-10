@@ -9,6 +9,7 @@ import Curriculum from './pages/Curriculum'
 import Extracurricular from './pages/Extracurricular'
 import Gallery from './pages/Gallery'
 import ContactUs from './pages/ContactUs'
+import ThankYou from './pages/ThankYou'
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="*" element={<Home />} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </main>
       <Footer />
